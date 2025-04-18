@@ -14,7 +14,7 @@ exports.createItem = async (req, res) => {
     } = req.body;
 
     const uploadStream = cloudinary.uploader.upload_stream(
-      { resource_type: "image", folder: "lostandfind" }, // <-- add folder option here
+      { resource_type: "image", folder: "lostandfind" },
       async (error, result) => {
         if (error) return res.status(500).json({ error: error.message });
 
