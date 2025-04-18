@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/items", itemsRouter);
+app.use("/api", itemsRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Lost and Found API" });
