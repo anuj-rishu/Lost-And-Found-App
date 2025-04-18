@@ -5,8 +5,8 @@ const cloudinary = require("../config/cloudinary");
 exports.createItem = async (req, res) => {
   try {
     const {
-      name,
-      description,
+      item_name,
+      item_description,
       location_found,
       finder_name,
       finder_contact,
@@ -20,12 +20,12 @@ exports.createItem = async (req, res) => {
 
         const item = new Item({
           id: uuidv4(),
-          name,
-          description,
+          item_name,
+          item_description,
           location_found,
           finder_name,
           finder_contact,
-          status: "found",
+          status: "lost",
           image_url: result.secure_url,
           found_date: new Date(found_date),
         });
