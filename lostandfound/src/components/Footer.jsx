@@ -9,7 +9,7 @@ const Footer = () => (
     </div>
     <div className="flex justify-center gap-6 mt-2">
       <a
-        href="https://www.linkedin.com/in/anuj_rishu/"
+        href="https://www.linkedin.com/in/anuj-rishu/"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block text-purple-400 hover:text-blue-400 transition"
@@ -18,7 +18,7 @@ const Footer = () => (
         <LinkedInIcon />
       </a>
       <a
-        href="https://github.com/anuj_rishu"
+        href="https://github.com/anuj-rishu"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block text-purple-400 hover:text-blue-400 transition"
