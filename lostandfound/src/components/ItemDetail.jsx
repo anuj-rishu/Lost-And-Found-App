@@ -17,7 +17,7 @@ const ItemDetail = ({ item }) => (
       {item.item_description || "No description provided."}
     </p>
     <div className="text-sm text-zinc-400 mb-2">
-      Email <span className="font-medium text-white">Found by:</span>{" "}
+      <span className="font-medium text-white">Found by:</span>{" "}
       {item.finder_name}
     </div>
     <div className="text-sm text-zinc-400 mb-4">
