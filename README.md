@@ -54,6 +54,6 @@ A full-stack application for managing lost and found items at SRM Institute of S
 ### 🧪 Frontend Setup
 
 ```bash
-cd frontend
+cd Lost-And-Found-App
 npm install
 
