@@ -28,22 +28,23 @@ const ItemDetailPage = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="w-8 h-8 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-8 h-8 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
+  
   if (error || !item) {
     return (
       <div className="container mx-auto px-4 py-12 max-w-2xl">
-        <div className="bg-red-900/20 p-8 rounded-xl border border-red-900/50 text-center">
+        <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 text-center shadow-lg">
           <h2 className="text-xl font-bold text-red-400 mb-2">
             Item Not Found
           </h2>
-          <p className="text-red-300 mb-6">
+          <p className="text-slate-300 mb-6">
             {error || "The item you are looking for does not exist."}
           </p>
           <button
-            className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white py-2 px-6 rounded-lg font-medium"
+            className="bg-gradient-to-r from-teal-600 to-emerald-500 hover:from-teal-700 hover:to-emerald-600 text-white py-2 px-6 rounded-lg font-medium transition-all duration-300 shadow-md"
             onClick={() => navigate("/")}
           >
             Back to Home
@@ -52,13 +53,17 @@ const ItemDetailPage = () => {
       </div>
     );
   }
+  
   return (
     <div className="container mx-auto px-2 sm:px-4 py-8">
       <button
         onClick={() => navigate("/")}
-        className="mb-6 text-zinc-400 hover:text-purple-400 transition"
+        className="mb-6 flex items-center text-slate-400 hover:text-teal-400 transition-colors"
       >
-        &larr; Back to all items
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to all items
       </button>
       <ItemDetail item={item} />
     </div>
